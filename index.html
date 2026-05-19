@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Helsinki Music Events Map - Friday 22 May 2026</title>
+    <meta
+      name="description"
+      content="Clickable Helsinki music event map and list for Friday 22 May 2026."
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQchZyoqkRLQPa7G9uI2yDbdS5K1gYo="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Helsinki music map</p>
+          <h1>Friday, 22 May 2026</h1>
+        </div>
+        <div class="date-note">
+          <span>Built from current public listings</span>
+          <span>Times in EEST</span>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Event filters">
+        <label class="search-box" for="searchInput">
+          <span>Search</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Event, artist, venue, area"
+            autocomplete="off"
+          />
+        </label>
+
+        <div class="segment-group" role="group" aria-label="Genre filter">
+          <button class="segment active" data-filter="all" type="button">All</button>
+          <button class="segment" data-filter="Electronic" type="button">Electronic</button>
+          <button class="segment" data-filter="Rock" type="button">Rock</button>
+          <button class="segment" data-filter="Metal" type="button">Metal</button>
+          <button class="segment" data-filter="Classical" type="button">Classical</button>
+          <button class="segment" data-filter="Soul" type="button">Soul</button>
+        </div>
+
+        <label class="select-box" for="sortSelect">
+          <span>Sort</span>
+          <select id="sortSelect">
+            <option value="time">Start time</option>
+            <option value="price">Lowest price</option>
+            <option value="area">Area</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="summary-strip" aria-label="Summary">
+        <div>
+          <strong id="eventCount">0</strong>
+          <span>events shown</span>
+        </div>
+        <div>
+          <strong id="venueCount">0</strong>
+          <span>venues</span>
+        </div>
+        <div>
+          <strong id="lateCount">0</strong>
+          <span>late-night options</span>
+        </div>
+        <div>
+          <strong id="budgetCount">0</strong>
+          <span>free or under 15 EUR</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Map and events">
+        <div class="map-panel">
+          <div id="map" aria-label="Map of Helsinki music events"></div>
+          <div id="mapFallback" class="map-fallback" hidden></div>
+        </div>
+
+        <aside class="list-panel" aria-label="Event list">
+          <div class="list-header">
+            <h2>Events</h2>
+            <span id="activeFilter">All genres</span>
+          </div>
+          <div id="eventList" class="event-list"></div>
+        </aside>
+      </section>
+
+      <section id="eventDetails" class="detail-panel" aria-live="polite"></section>
+
+      <footer class="source-panel">
+        <h2>Sources Used</h2>
+        <p>
+          Listings can change quickly, especially ticket status and door prices. Each event links
+          to the source I used so it is easy to confirm before going.
+        </p>
+        <div id="sourceList" class="source-list"></div>
+      </footer>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
