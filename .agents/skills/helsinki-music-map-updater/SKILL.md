@@ -28,7 +28,7 @@ Use this skill from the `helsinki-music-map` repository root when the user asks 
 - Require a validated canonical slug from `parse_date_slug.py`.
 - Fetch current main, switch to `main`, fast-forward pull, then create `update-YYYY-MM-DD_day` from `origin/main`.
 - If the branch already exists locally or remotely, stop and ask before reusing it.
-- Never stage unrelated files. Existing untracked files such as `.gitignore` must remain untouched unless the user explicitly asks.
+- Never stage unrelated files. Existing unrelated files, including untracked files, must remain untouched unless the user explicitly asks.
 
 ### 2. Research Events
 
