@@ -21,7 +21,10 @@ if ! command -v gh >/dev/null 2>&1; then
   exit 2
 fi
 
-gh auth status >/dev/null
+if ! gh auth status >/dev/null 2>&1; then
+  echo "error: gh is not authenticated" >&2
+  exit 2
+fi
 
 echo "repo_root=${repo_root}"
 echo "branch=$(git branch --show-current)"
