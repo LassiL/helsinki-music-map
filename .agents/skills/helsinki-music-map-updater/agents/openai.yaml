@@ -1,4 +1,4 @@
 interface:
   display_name: "Helsinki Music Map Updater"
   short_description: "Update the Helsinki music map for a new date and open a PR."
-  default_prompt: "Update the Helsinki music map for 2026-05-29_friday."
+  default_prompt: "Update the Helsinki music map for <date-slug>."
