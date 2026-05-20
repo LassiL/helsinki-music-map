@@ -19,7 +19,7 @@ Keep the existing schema:
 }
 ```
 
-`extraSourceUrl` is optional. Use stable, URL-safe `id` values. Use `priceValue: 999` when sorting should push sold-out or unknown-price events to the end.
+`extraSourceUrl` is optional. Use stable, URL-safe `id` values. Use `priceValue: 999` for unknown or unlisted prices so those events sort to the end; for sold-out events, keep the actual numeric `priceValue` when a price is known.
 
 ## Source Standards
 
