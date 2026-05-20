@@ -198,7 +198,7 @@ const events = [
     lat: 60.1695,
     lng: 24.9334,
     price: "Sold out",
-    priceValue: 999,
+    priceValue: Number.POSITIVE_INFINITY,
     age: "K-18",
     status: "Sold out",
     artists: ["Viikate"],
