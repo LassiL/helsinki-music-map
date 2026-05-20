@@ -79,13 +79,13 @@ Only the intended files should be modified.
   ```bash
   git push -u origin update-YYYY-MM-DD_day
   ```
-- Generate PR body:
+- Generate the PR body and save it to a file:
   ```bash
-  python3 .agents/skills/helsinki-music-map-updater/scripts/summarize_update.py 2026-05-29_friday
+  python3 .agents/skills/helsinki-music-map-updater/scripts/summarize_update.py 2026-05-29_friday --output-file /tmp/update-pr-body.md
   ```
 - Create a normal PR:
   ```bash
-  gh pr create --base main --head update-YYYY-MM-DD_day --title "Update map for <Weekday> <D Month YYYY> events" --body-file <body-file>
+  gh pr create --base main --head update-YYYY-MM-DD_day --title "Update map for <Weekday> <D Month YYYY> events" --body-file /tmp/update-pr-body.md
   ```
 
 Final response must include branch, commit, PR URL, event count, validation performed, and any fields that remained intentionally marked as unknown.
