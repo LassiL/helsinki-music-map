@@ -8,11 +8,47 @@ import sys
 from parse_date_slug import parse_slug
 
 
-def count_events(script_text):
-    events_match = re.search(r"const events = \[(.*?)]\;\n\nconst mapBounds", script_text, re.S)
-    if not events_match:
+def extract_events_block(script_text):
+    start_match = re.search(r"const events\s*=\s*\[", script_text)
+    if not start_match:
         return None
-    return len(re.findall(r'^\s+id: "', events_match.group(1), flags=re.M))
+
+    start_index = start_match.end()
+    depth = 1
+    in_string = None
+    escaped = False
+
+    for index in range(start_index, len(script_text)):
+        char = script_text[index]
+
+        if escaped:
+            escaped = False
+            continue
+
+        if in_string:
+            if char == "\\":
+                escaped = True
+            elif char == in_string:
+                in_string = None
+            continue
+
+        if char in ('"', "'", "`"):
+            in_string = char
+        elif char == "[":
+            depth += 1
+        elif char == "]":
+            depth -= 1
+            if depth == 0:
+                return script_text[start_index:index]
+
+    return None
+
+
+def count_events(script_text):
+    events_block = extract_events_block(script_text)
+    if events_block is None:
+        return None
+    return len(re.findall(r'^\s+id: "', events_block, flags=re.M))
 
 
 def count_sources(script_text):
