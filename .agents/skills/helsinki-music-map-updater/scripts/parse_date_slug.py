@@ -44,7 +44,7 @@ def parse_slug(raw):
         "branch": f"update-{canonical_slug}",
         "display_date": display_date,
         "compact_display_date": compact_display_date,
-        "commit_message": f"Update map for {weekday.capitalize()} events",
+        "commit_message": f"Update map for {weekday} events",
         "pr_title": f"Update map for {date.strftime('%A')} {date.day} {date.strftime('%B')} {date.year} events",
     }
 
