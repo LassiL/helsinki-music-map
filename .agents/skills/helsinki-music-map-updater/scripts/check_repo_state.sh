@@ -28,7 +28,12 @@ fi
 
 echo "repo_root=${repo_root}"
 echo "branch=$(git branch --show-current)"
-echo "origin=$(git remote get-url origin)"
+origin_url="$(git remote get-url origin)"
+origin_display="${origin_url}"
+if [[ "${origin_display}" == *"://"* ]]; then
+  origin_display="$(printf '%s\n' "${origin_display}" | sed -E 's#^([[:alpha:]][[:alnum:]+.-]*://)[^/@]+@#\1#')"
+fi
+echo "origin=${origin_display}"
 
 status="$(git status --porcelain)"
 if [[ -n "${status}" ]]; then
