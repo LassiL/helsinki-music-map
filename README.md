@@ -1,6 +1,6 @@
 # Helsinki Music Events Map
 
-Static event map for Helsinki music listings on Saturday 23 May 2026.
+Static event map for Helsinki music listings on Friday 29 May 2026.
 
 Event data was manually compiled from public listings and may become outdated.  
 Check the linked source listings before making plans.
