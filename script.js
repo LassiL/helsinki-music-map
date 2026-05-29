@@ -260,7 +260,7 @@ const events = [
     note:
       "On The Rocks lists the Friday show with K-18 venue terms, 20:00 doors, and 18/21 EUR advance/door pricing.",
     sourceName: "On The Rocks",
-    sourceUrl: "https://www.rocks.fi/tapahtumat/"
+    sourceUrl: "https://www.rocks.fi/tapahtumat/atlas-lastout/"
   },
   {
     id: "rem-for-the-people",
@@ -444,7 +444,7 @@ const events = [
 ];
 
 const mapBounds = {
-  north: 60.198,
+  north: 60.208,
   south: 60.162,
   west: 24.918,
   east: 24.975
