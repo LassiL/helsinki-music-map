@@ -1,5 +1,29 @@
 const events = [
   {
+    id: "mare-alta-trio",
+    title: "Maré Alta Trio",
+    category: "Soul",
+    genre: "Jazz / terrace concert",
+    date: "Friday 29 May 2026",
+    start: "17:00",
+    end: "18:00",
+    venue: "Musiikkitalo Terrace",
+    area: "Töölönlahti",
+    address: "Mannerheimintie 13a, 00100 Helsinki",
+    lat: 60.1733,
+    lng: 24.9348,
+    price: "Free entry",
+    priceValue: 0,
+    age: "All ages unless noted by venue",
+    status: "Free entry",
+    artists: ["Maré Alta Trio"],
+    note:
+      "Helsinki events calendar and Jazz Finland list Maré Alta Trio as the Friday 29.5. Musiikkitalo terrace concert from 17:00 to 18:00.",
+    sourceName: "Helsinki Events / Jazz Finland",
+    sourceUrl: "https://tapahtumat.hel.fi/en/events/helsinki%3Aagpbwzd6jy",
+    extraSourceUrl: "https://jazzfinland.fi/"
+  },
+  {
     id: "vapauden-kaikuja",
     title: "Kansanmusiikkia Taideyliopistosta: Vapauden kaikuja",
     category: "Classical",
@@ -18,7 +42,7 @@ const events = [
     status: "Free entry",
     artists: ["Riina Hellsten"],
     note:
-      "Uniarts lists this Sibelius Academy folk music concert on Friday 29.5. at 17:30 with free entry.",
+      "Uniarts lists this Sibelius Academy folk music concert on Friday 29.5. at 17:30 with free entry and Riina Hellsten on kantele.",
     sourceName: "Uniarts",
     sourceUrl: "https://www.uniarts.fi/tapahtumat/kansanmusiikkia-taideyliopistosta-vapauden-kaikuja/"
   },
@@ -35,13 +59,13 @@ const events = [
     address: "Urho Kekkosen katu 4-6, 00100 Helsinki",
     lat: 60.1685,
     lng: 24.933,
-    price: "35 EUR at door",
-    priceValue: 35,
+    price: "33 EUR advance / 35 EUR door",
+    priceValue: 33,
     age: "K-18",
     status: "On sale",
     artists: ["Eino Grön"],
     note:
-      "Tavastia's official listing gives the Friday date, K-18 status, 19:00 doors, and 35 EUR door price.",
+      "Tavastia's official listing gives the Friday date, K-18 status, 19:00 doors, 20:00 show, and 33/35 EUR pricing.",
     sourceName: "Tavastia",
     sourceUrl: "https://tavastiaklubi.fi/events/2026-05-29/eino-gron/117583/"
   },
@@ -70,10 +94,10 @@ const events = [
       "Teppo Mäkynen"
     ],
     note:
-      "Sublime lists the rare 20th-anniversary show at Ääniwalli; Jazz Finland confirms the 19:00 time and 29 EUR ticket.",
-    sourceName: "Sublime / Jazz Finland",
-    sourceUrl: "https://sublime.fi/konsertit/timo-lassy-aaniwalli",
-    extraSourceUrl: "https://jazzfinland.fi/live/2026/05"
+      "Ääniwalli lists The Five Corners Quintet for Friday 29.5.; Jazz Finland and Meteli confirm the 19:00 time and 29 EUR ticket.",
+    sourceName: "Ääniwalli / Jazz Finland",
+    sourceUrl: "https://aaniwalli.fi/",
+    extraSourceUrl: "https://jazzfinland.fi/"
   },
   {
     id: "teini-paa-rosettes",
@@ -114,10 +138,10 @@ const events = [
     price: "Standard 32 EUR + 4 EUR cloakroom",
     priceValue: 32,
     age: "All ages",
-    status: "On sale",
+    status: "Sold out",
     artists: ["Emilia Sisco", "The Northern Lights"],
     note:
-      "Official G Livelab listing gives doors, showtime, standard ticket price, cloakroom note, and all-ages status.",
+      "Official G Livelab listing now marks the concert sold out and gives doors, showtime, standard ticket price, cloakroom note, and all-ages status.",
     sourceName: "G Livelab",
     sourceUrl: "https://glivelab.fi/events/emilia-sisco-the-northern-lights-68d6478cb7381a9fc08cc14d/"
   },
@@ -140,9 +164,10 @@ const events = [
     status: "On sale",
     artists: ["KAVABANGA Depo Kolibri"],
     note:
-      "Mticket lists the Friday Helsinki show at Tiivistämö with doors at 19:00, show at 20:00, 45-85 EUR tickets, and 18+ entry.",
-    sourceName: "mTicket",
-    sourceUrl: "https://fi.mticket.eu/en/helsinki/kavabanga-depo-kolibri-live-in-helsinki-3464.html"
+      "Kontramarka and AfishaMira list the Friday Helsinki show at Tiivistämö with a 20:00 start, tickets from 45 EUR, and 18+ entry.",
+    sourceName: "Kontramarka / AfishaMira",
+    sourceUrl: "https://www.kontramarka.com/tickets-kavabanga-depo-kolibri-helsinki/",
+    extraSourceUrl: "https://afishamira.com/event/gruppa-kavabanga-depo-kolibri-v-helsinki-2026/"
   },
   {
     id: "post-pulse",
@@ -163,11 +188,9 @@ const events = [
     status: "On sale",
     artists: ["Post Pulse", "Sisin", "Sounds of Delusion"],
     note:
-      "Kuudes Linja lists the early concert with 19:00 doors; AllEvents adds the 19:30, 20:30, and 21:30 running order.",
-    sourceName: "Kuudes Linja / AllEvents",
-    sourceUrl: "https://www.kuudeslinja.com/",
-    extraSourceUrl:
-      "https://allevents.in/helsinki/post-pulse-levyjulkkarit-sisin-sounds-of-delusion-kuudes-linja-helsinki/200029549191545"
+      "Kuudes Linja lists the early concert with 19:00 doors, 19:30/20:30/21:30 running order, and advance/door prices.",
+    sourceName: "Kuudes Linja",
+    sourceUrl: "https://www.kuudeslinja.com/"
   },
   {
     id: "antimere",
@@ -188,7 +211,7 @@ const events = [
     status: "On sale",
     artists: ["Antimere (SWE)", "Ode of Disgrace", "Bloodstained Halo"],
     note:
-      "Dark Soul Agency lists the Nordic Metal Alliance Helsinki timetable; Keikat lists Semifinal, 20:00, and 14 EUR.",
+      "Dark Soul Agency lists the Nordic Metal Alliance Helsinki timetable with Bloodstained Halo at 20:30, Ode of Disgrace at 21:30, and Antimere at 22:30; Keikat confirms Semifinal and 14 EUR.",
     sourceName: "Dark Soul Agency / Keikat",
     sourceUrl: "https://www.darksoulagency.com/dsatapahtumat",
     extraSourceUrl: "https://keikat.org/helsinki"
@@ -235,10 +258,9 @@ const events = [
     status: "On sale",
     artists: ["OG Ulla-Maija", "Wibe"],
     note:
-      "HEPP and Meteli list the Friday On The Rocks show with K-18 status, 20:00 start, 20:00-23:30 timing, and advance/door price range.",
-    sourceName: "HEPP / Meteli",
-    sourceUrl: "https://hepp.fi/hki/rocks",
-    extraSourceUrl: "https://www.meteli.net/tapahtuma/og-ulla-maija-wibe"
+      "On The Rocks lists the Friday show with K-18 venue terms, 20:00 doors, and 18/21 EUR advance/door pricing.",
+    sourceName: "On The Rocks",
+    sourceUrl: "https://www.rocks.fi/tapahtumat/"
   },
   {
     id: "rem-for-the-people",
@@ -282,10 +304,9 @@ const events = [
     status: "On sale",
     artists: ["KISS Army Finland all-star tribute band"],
     note:
-      "Bar Loose lists the Friday 21:00-23:30 tribute night; Tapahtumainfo adds the advance, door, and cloakroom prices.",
-    sourceName: "Bar Loose / Tapahtumainfo",
-    sourceUrl: "https://barloose.com/en/live/list/",
-    extraSourceUrl: "https://tapahtumainfo.fi/tapahtuma/2026/05/ace-frehley-ultimate-tribute-night/428335"
+      "Bar Loose lists the Friday 21:00-23:30 tribute night, 15 EUR advance tickets, 17 EUR door price, and 3.50 EUR cloakroom fee.",
+    sourceName: "Bar Loose live list",
+    sourceUrl: "https://barloose.com/en/live/ace-frehley-tribuutti-ilta/"
   },
   {
     id: "emodisko-american-pie",
@@ -311,29 +332,6 @@ const events = [
     sourceUrl: "https://korjaamo.fi/tapahtumat/"
   },
   {
-    id: "king-kong-klubi",
-    title: "KING KONG -klubi",
-    category: "Soul",
-    genre: "Rock / soul / rhythm & blues",
-    date: "Friday 29 May 2026",
-    start: "22:00",
-    end: "not listed",
-    venue: "Tähti, Train Factory",
-    area: "Vallila",
-    address: "Aleksis Kiven katu 17, 00510 Helsinki",
-    lat: 60.1928,
-    lng: 24.9464,
-    price: "13.50 EUR",
-    priceValue: 13.5,
-    age: "K-18",
-    status: "On sale",
-    artists: ["Knucklebone Oscar", "Siiri Nordin"],
-    note:
-      "Lippu.fi lists KING KONG -klubi at Tähti, Train Factory on Friday 29.5. at 22:00 with K-18 tickets at 13.50 EUR.",
-    sourceName: "Lippu.fi",
-    sourceUrl: "https://www.lippu.fi/event/king-kong-klubi-tahti-train-factory-21682305/"
-  },
-  {
     id: "radc-yo",
     title: "RADC Yö: Lara Silva, Jeku, una",
     category: "Electronic",
@@ -350,12 +348,12 @@ const events = [
     priceValue: 0,
     age: "Check venue",
     status: "On sale",
-    artists: ["Lara Silva", "Jeku", "una"],
+    artists: ["Lara Silva", "Jeku", "DJ JVS (una)"],
     note:
       "Post Bar lists the Friday RADC Yö lineup, 22:00-05:00 doors, free-before-23 pricing, and advance ticket note.",
-    sourceName: "Post Bar",
+    sourceName: "Post Bar / RA",
     sourceUrl: "https://postbar.fi/archive/",
-    extraSourceUrl: "https://ra.co/dj/larasilva"
+    extraSourceUrl: "https://ra.co/events/2428906"
   },
   {
     id: "fiona-zanetti",
@@ -388,29 +386,6 @@ const events = [
     extraSourceUrl: "https://ra.co/events/2438363"
   },
   {
-    id: "dionysian-band",
-    title: "Dionysian Band - The Doors Tribute",
-    category: "Rock",
-    genre: "The Doors tribute / rock",
-    date: "Friday 29 May 2026",
-    start: "22:30",
-    end: "01:00",
-    venue: "Storyville Music Club",
-    area: "Etu-Töölö",
-    address: "Museokatu 8, 00100 Helsinki",
-    lat: 60.1739,
-    lng: 24.9319,
-    price: "13.50 EUR advance",
-    priceValue: 13.5,
-    age: "K-18",
-    status: "On sale",
-    artists: ["Dionysian Band", "Henrik Korpela", "Jari Melart", "Pekka Helesuo", "Tatu Pärssinen"],
-    note:
-      "Storyville lists the Friday tribute show from 22:30 to 01:00 and names the band members in the event details.",
-    sourceName: "Storyville",
-    sourceUrl: "https://storyville.fi/shortly-in-english/"
-  },
-  {
     id: "neptune-night",
     title: "Neptune Night Vol. 2 x Obsidian",
     category: "Electronic",
@@ -428,19 +403,43 @@ const events = [
     age: "K-18",
     status: "On sale",
     artists: [
+      "Babyblu x Margiiela",
+      "AKTIVE",
+      "KUKAEME",
       "Bhaly",
-      "Margiela x Baby Blu",
-      "Eme",
-      "Äktive!",
-      "Zahi",
-      "Eddy",
-      "Elina Adel B2B",
+      "Reveriel b2b Magentamimma",
+      "DJ PIXI",
+      "Evan Wheel",
+      "Scarab",
       "surprise guests"
     ],
     note:
-      "Kuudes Linja lists this Friday late-night club event with DJs, 23:15-04:30 doors, K-18, and advance/door pricing.",
+      "Kuudes Linja's current listing gives the updated live/DJ lineup, 23:15-04:30 doors, K-18, and advance/door pricing.",
     sourceName: "Kuudes Linja",
     sourceUrl: "https://www.kuudeslinja.com/"
+  },
+  {
+    id: "when-i-was-young",
+    title: "When I Was Young w/ DJ Iiro",
+    category: "Electronic",
+    genre: "DJ night / nostalgic club",
+    date: "Friday 29 May 2026",
+    start: "23:30",
+    end: "04:30",
+    venue: "Bar Loose",
+    area: "Kamppi",
+    address: "Annankatu 21, 00100 Helsinki",
+    lat: 60.1668,
+    lng: 24.9374,
+    price: "Free entry",
+    priceValue: 0,
+    age: "K-18",
+    status: "Free entry",
+    artists: ["DJ Iiro"],
+    note:
+      "Bar Loose's current events list has this Friday late-night DJ event running 23:30-04:30 with free entry.",
+    sourceName: "Bar Loose",
+    sourceUrl: "https://barloose.com/live/"
   }
 ];
 
